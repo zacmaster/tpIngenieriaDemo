@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aplicación remises</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>Bienvenide a la página</header>
+    <ul>
+        <li><button onclick="cargarVista('vista1')">Vista 1</button></li>
+        <li><button onclick="cargarVista('vista2')">Vista 2</button></li>
+        <li><button onclick="cargarVista('vista3')">Vista 3</button></li>
+    </ul>
+    <div id="content"></div>
+    <script>
+        const cargarVista  = vista => {
+            const url = './' + vista + '.html'
+            fetch(url)
+                .then(r => r.text())
+                .then(content => {
+                    document.getElementById('content').innerHTML = content
+                })
+        }
+
+    </script>
+    <script src="./util.js"></script>
+    <script src="./vista1.js"></script>
+</body>
+</html>

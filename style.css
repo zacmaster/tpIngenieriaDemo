@@ -1,0 +1,16 @@
+header{
+    border-bottom: solid 1px red;
+}
+#content{
+    border: solid 1px blue;
+    padding: 100px;
+}
+.bgRed{
+    background-color: red;
+}
+.bgGreen{
+    background-color: green;
+}
+.bgYellow{
+    background-color: yellow;
+}
