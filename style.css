@@ -14,3 +14,11 @@ header{
 .bgYellow{
     background-color: yellow;
 }
+.border{
+    border: solid 1px black;
+}
+
+table,td{
+    border: solid 1px black;
+    border-collapse: collapse;
+}
