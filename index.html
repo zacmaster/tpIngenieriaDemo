@@ -28,6 +28,16 @@
                 .then(r => r.text())
                 .then(content => {
                     document.getElementById('content').innerHTML = content
+                    
+                    switch(vista){
+                        case 'vista2':
+                            entrandoVistaDos()
+                            break;
+                        case 'vista3':
+                            entrandoVistaTres()
+                            break;    
+                    }
+                
                 })
         }
 
@@ -37,5 +47,7 @@
     </script>
     <script src="./util.js"></script>
     <script src="./vista1.js"></script>
+    <script src="./vista2.js"></script>
+    <script src="./vista3.js"></script>
 </body>
 </html>

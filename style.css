@@ -22,3 +22,18 @@ table,td{
     border: solid 1px black;
     border-collapse: collapse;
 }
+.containerMap{
+    width: 70vw;
+    height: 70vw;
+
+}
+
+.containerVistaDos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+

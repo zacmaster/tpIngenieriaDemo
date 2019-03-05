@@ -9,7 +9,7 @@ const apiUrl = "https://infraccionesya.herokuapp.com/api/"
 function crearMapa(nodeId){
     // Ubicación de la UNGS.
     var ungsLocation = [-34.5221554, -58.7000067];
-
+    console.log('estoy creando mapa')
     // Creación del componente mapa de Leaflet.
     var map = L.map(nodeId).setView(ungsLocation, 13);
 
