@@ -4,14 +4,15 @@ const consultarInfraccion = (e) =>{
     console.log('Consultando patente...')
     const resultado = 'El resultado es '
     //   dqs('#resultado').innerHTML = resultado + dqs('#input').value
-    let patente = dqs('#input').value
+    let patente = dqs('#input').value.toUpperCase()
+    dqs("#input").value = ''
     getInfracciones(patente)
 }
 
 function getInfracciones(patente){
     fetch(apiUrl + patente + '/infracciones/')
     .then(r => r.json())
-    .then(r => mostrarInfracciones(r.infracciones)) 
+    .then(r => r.infracciones.length > 0 ? mostrarInfracciones(r.infracciones) : sinInfracciones(patente)) 
 }
 
 function mostrarInfracciones(infracciones){
@@ -43,4 +44,11 @@ function mostrarInfracciones(infracciones){
     dqs('#infracciones').innerHTML = infraccionesHTML
 
 
+}
+
+function sinInfracciones(patente){
+    dqs('#infracciones').innerHTML = `
+        <h2>No se encontraron infracciones para la patente ${patente}</h2>
+
+    `
 }
